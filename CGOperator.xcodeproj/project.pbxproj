@@ -10,6 +10,7 @@
 		F73D9BD21A7BAEC90080135B /* CGOperator.h in Headers */ = {isa = PBXBuildFile; fileRef = F73D9BD11A7BAEC90080135B /* CGOperator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F73D9BD81A7BAEC90080135B /* CGOperator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73D9BCC1A7BAEC90080135B /* CGOperator.framework */; };
 		F73D9BDF1A7BAEC90080135B /* CGOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D9BDE1A7BAEC90080135B /* CGOperatorTests.swift */; };
+		F73D9BE91A7BAEED0080135B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D9BE81A7BAEED0080135B /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F73D9BD71A7BAEC90080135B /* CGOperatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGOperatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73D9BDD1A7BAEC90080135B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F73D9BDE1A7BAEC90080135B /* CGOperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGOperatorTests.swift; sourceTree = "<group>"; };
+		F73D9BE81A7BAEED0080135B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				F73D9BD11A7BAEC90080135B /* CGOperator.h */,
+				F73D9BE81A7BAEED0080135B /* Operators.swift */,
 				F73D9BCF1A7BAEC90080135B /* Supporting Files */,
 			);
 			path = CGOperator;
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73D9BE91A7BAEED0080135B /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 		F73D9BE31A7BAEC90080135B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F73D9BE41A7BAEC90080135B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
