@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F73D9BD21A7BAEC90080135B /* CGOperator.h in Headers */ = {isa = PBXBuildFile; fileRef = F73D9BD11A7BAEC90080135B /* CGOperator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F73D9BD81A7BAEC90080135B /* CGOperator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73D9BCC1A7BAEC90080135B /* CGOperator.framework */; };
-		F73D9BDF1A7BAEC90080135B /* CGOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D9BDE1A7BAEC90080135B /* CGOperatorTests.swift */; };
+		F73D9BDF1A7BAEC90080135B /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D9BDE1A7BAEC90080135B /* OperatorsTests.swift */; };
 		F73D9BE91A7BAEED0080135B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D9BE81A7BAEED0080135B /* Operators.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		F73D9BD11A7BAEC90080135B /* CGOperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGOperator.h; sourceTree = "<group>"; };
 		F73D9BD71A7BAEC90080135B /* CGOperatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGOperatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73D9BDD1A7BAEC90080135B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F73D9BDE1A7BAEC90080135B /* CGOperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGOperatorTests.swift; sourceTree = "<group>"; };
+		F73D9BDE1A7BAEC90080135B /* OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		F73D9BE81A7BAEED0080135B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 		F73D9BDB1A7BAEC90080135B /* CGOperatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				F73D9BDE1A7BAEC90080135B /* CGOperatorTests.swift */,
+				F73D9BDE1A7BAEC90080135B /* OperatorsTests.swift */,
 				F73D9BDC1A7BAEC90080135B /* Supporting Files */,
 			);
 			path = CGOperatorTests;
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73D9BDF1A7BAEC90080135B /* CGOperatorTests.swift in Sources */,
+				F73D9BDF1A7BAEC90080135B /* OperatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

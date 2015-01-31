@@ -40,7 +40,7 @@ Plus operator for CGPoint
 
 :returns: A new CGPoint with .x = lhs.x + rhs.x, .y = lhs.y + rhs.y
 */
-func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
@@ -52,7 +52,7 @@ Minus operator for CGPoint
 
 :returns: A new CGPoint with .x = lhs.x - rhs.x, .y = lhs.y - rhs.y
 */
-func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+public func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
 }
 
@@ -64,7 +64,7 @@ Product operator for CGSize multiplied by CGFloat
 
 :returns: A new CGSize with .width = lhs.width * rhs, .height = lhs.height * rhs
 */
-func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
+public func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
     return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
 }
 
@@ -76,7 +76,7 @@ Divide operator for CGSize divided by CGFloat
 
 :returns: A new CGSize with .width = lhs.width / rhs, .height = lhs.height / rhs
 */
-func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
+public func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
     return CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
 }
 
@@ -88,7 +88,7 @@ Union operator for two CGRects
 
 :returns: A new CGRect minimum to cover given two
 */
-func |(lhs: CGRect, rhs: CGRect) -> CGRect {
+public func |(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectUnion(lhs, rhs)
 }
 
@@ -100,6 +100,6 @@ Intersection operator for two CGRects
 
 :returns: A new CGRect maximum to be contained in both two CGRects given
 */
-func &(lhs: CGRect, rhs: CGRect) -> CGRect {
+public func &(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectIntersection(lhs, rhs)
 }
