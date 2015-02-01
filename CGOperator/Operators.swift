@@ -33,6 +33,18 @@ public func ~= (rect: CGRect, point: CGPoint) -> Bool {
 }
 
 /**
+Pattern match operator to check whether CGRect contained in CGRect
+
+:param: rect          Pattern rect
+:param: containedRect Predicate rect
+
+:returns: whether rect contained in other rect
+*/
+public func ~= (rect: CGRect, containedRect: CGRect) -> Bool {
+    return rect.contains(containedRect)
+}
+
+/**
 Plus operator for CGPoint
 
 :param: lhs left hand point

@@ -11,12 +11,21 @@ import XCTest
 
 class OperatorsTests: XCTestCase {
     
-    func testMatchOperator() {
+    func testPointMatchOperator() {
         let point = CGPoint(x: 1, y: 2)
         let rect = CGRect(x: 0, y: 0, width: 2, height: 3)
         switch point {
         case rect : XCTAssert(true, "rect should contain point")
         default : XCTFail("rect don't contain point")
+        }
+    }
+    
+    func testRectMatchOperator() {
+        let rect = CGRect(x: 1, y: 1, width: 0.5, height: 0.5)
+        let otherRect = CGRect(x: 0, y: 0, width: 2, height: 3)
+        switch rect {
+        case otherRect : XCTAssert(true, "rect should contain rect")
+        default : XCTFail("rect don't contain rect")
         }
     }
     
