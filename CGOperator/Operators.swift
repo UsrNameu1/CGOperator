@@ -45,6 +45,16 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
 }
 
 /**
+Plus assignment operator for CGPoint
+
+:param: lhs left hand variable
+:param: rhs right hand point to be assigned
+*/
+func += (inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = lhs + rhs
+}
+
+/**
 Minus operator for CGPoint
 
 :param: lhs left hand point
@@ -54,6 +64,16 @@ Minus operator for CGPoint
 */
 func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+}
+
+/**
+Minus assignment operator for CGPoint
+
+:param: lhs left hand variable
+:param: rhs right hand point to be assigned
+*/
+func -= (inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = lhs - rhs
 }
 
 /**
@@ -69,6 +89,16 @@ func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
 }
 
 /**
+Product assignment operator for CGSize
+
+:param: lhs left hand variable
+:param: rhs right hand float by which multiply lhs CGSize
+*/
+func *= (inout lhs: CGSize, rhs: CGFloat) {
+    lhs = lhs * rhs
+}
+
+/**
 Divide operator for CGSize divided by CGFloat
 
 :param: lhs left hand CGSize to be divided
@@ -78,6 +108,16 @@ Divide operator for CGSize divided by CGFloat
 */
 func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
     return CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
+}
+
+/**
+Divide assignment operator for CGSize
+
+:param: lhs left hand variable
+:param: rhs right hand float by which divide lhs CGSize
+*/
+func /= (inout lhs: CGSize, rhs: CGFloat) {
+    lhs = lhs / rhs
 }
 
 /**
@@ -103,3 +143,4 @@ Intersection operator for two CGRects
 func &(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectIntersection(lhs, rhs)
 }
+
