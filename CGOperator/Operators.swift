@@ -33,6 +33,18 @@ public func ~= (rect: CGRect, point: CGPoint) -> Bool {
 }
 
 /**
+Pattern match operator to check whether CGRect contained in CGRect
+
+:param: rect          Pattern rect
+:param: containedRect Predicate rect
+
+:returns: whether rect contained in other rect
+*/
+public func ~= (rect: CGRect, containedRect: CGRect) -> Bool {
+    return rect.contains(containedRect)
+}
+
+/**
 Plus operator for CGPoint
 
 :param: lhs left hand point
@@ -40,7 +52,7 @@ Plus operator for CGPoint
 
 :returns: A new CGPoint with .x = lhs.x + rhs.x, .y = lhs.y + rhs.y
 */
-func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
@@ -62,7 +74,7 @@ Minus operator for CGPoint
 
 :returns: A new CGPoint with .x = lhs.x - rhs.x, .y = lhs.y - rhs.y
 */
-func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+public func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
 }
 
@@ -84,7 +96,7 @@ Product operator for CGSize multiplied by CGFloat
 
 :returns: A new CGSize with .width = lhs.width * rhs, .height = lhs.height * rhs
 */
-func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
+public func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
     return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
 }
 
@@ -106,7 +118,7 @@ Divide operator for CGSize divided by CGFloat
 
 :returns: A new CGSize with .width = lhs.width / rhs, .height = lhs.height / rhs
 */
-func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
+public func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
     return CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
 }
 
@@ -128,7 +140,7 @@ Union operator for two CGRects
 
 :returns: A new CGRect minimum to cover given two
 */
-func |(lhs: CGRect, rhs: CGRect) -> CGRect {
+public func |(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectUnion(lhs, rhs)
 }
 
@@ -140,7 +152,6 @@ Intersection operator for two CGRects
 
 :returns: A new CGRect maximum to be contained in both two CGRects given
 */
-func &(lhs: CGRect, rhs: CGRect) -> CGRect {
+public func &(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectIntersection(lhs, rhs)
 }
-
