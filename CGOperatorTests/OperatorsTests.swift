@@ -36,11 +36,25 @@ class OperatorsTests: XCTestCase {
         XCTAssert(cpoint.x == 3 && cpoint.y == 3, "points should be added with plus operator")
     }
     
+    func testPlusAssignOperator() {
+        var apoint = CGPoint(x: 1, y: 1)
+        let bpoint = CGPoint(x: 2, y: 2)
+        apoint += bpoint
+        XCTAssert(apoint.x == 3 && apoint.y == 3, "points should be added with plus assignment operator")
+    }
+    
     func testMinusOperator() {
         let apoint = CGPoint(x: 2, y: 2)
         let bpoint = CGPoint(x: 1, y: 1)
         let cpoint = apoint - bpoint
-        XCTAssert(cpoint.x == 1 && cpoint.y == 1, "point should be generated with minus operator")
+        XCTAssert(cpoint.x == 1 && cpoint.y == 1, "point should be computed diffence with minus operator")
+    }
+    
+    func testMinusAssignOperator() {
+        var apoint = CGPoint(x: 1, y: 1)
+        let bpoint = CGPoint(x: 2, y: 2)
+        apoint -= bpoint
+        XCTAssert(apoint.x == -1 && apoint.y == -1, "point should be computed diffence with minus assign operator")
     }
     
     func testProductOperator() {
@@ -50,11 +64,25 @@ class OperatorsTests: XCTestCase {
         XCTAssert(bsize.width == 4 && bsize.height == 8, "size should be multiplied with product operator")
     }
     
+    func testProductAssignOperator() {
+        var asize = CGSize(width: 1, height: 2)
+        let aconst: CGFloat = 2
+        asize *= aconst
+        XCTAssert(asize.width == 2 && asize.height == 4, "size should be multiplied with product assign operator")
+    }
+    
     func testDivideOperator() {
         let asize = CGSize(width: 6, height: 3)
         let aconst: CGFloat = 3
         let bsize = asize / aconst
         XCTAssert(bsize.width == 2 && bsize.height == 1, "size should be divided with divide operator")
+    }
+    
+    func testDivideAssignOperator() {
+        var asize = CGSize(width: 6, height: 3)
+        let aconst: CGFloat = 3
+        asize /= aconst
+        XCTAssert(asize.width == 2 && asize.height == 1, "size should be divided with divide assign operator")
     }
     
     func testUnionOperator() {

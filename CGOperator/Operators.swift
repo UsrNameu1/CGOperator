@@ -62,7 +62,7 @@ Plus assignment operator for CGPoint
 :param: lhs left hand variable
 :param: rhs right hand point to be assigned
 */
-func += (inout lhs: CGPoint, rhs: CGPoint) {
+public func += (inout lhs: CGPoint, rhs: CGPoint) {
     lhs = lhs + rhs
 }
 
@@ -84,7 +84,7 @@ Minus assignment operator for CGPoint
 :param: lhs left hand variable
 :param: rhs right hand point to be assigned
 */
-func -= (inout lhs: CGPoint, rhs: CGPoint) {
+public func -= (inout lhs: CGPoint, rhs: CGPoint) {
     lhs = lhs - rhs
 }
 
@@ -106,7 +106,7 @@ Product assignment operator for CGSize
 :param: lhs left hand variable
 :param: rhs right hand float by which multiply lhs CGSize
 */
-func *= (inout lhs: CGSize, rhs: CGFloat) {
+public func *= (inout lhs: CGSize, rhs: CGFloat) {
     lhs = lhs * rhs
 }
 
@@ -128,7 +128,7 @@ Divide assignment operator for CGSize
 :param: lhs left hand variable
 :param: rhs right hand float by which divide lhs CGSize
 */
-func /= (inout lhs: CGSize, rhs: CGFloat) {
+public func /= (inout lhs: CGSize, rhs: CGFloat) {
     lhs = lhs / rhs
 }
 
