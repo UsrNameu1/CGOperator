@@ -145,6 +145,16 @@ public func |(lhs: CGRect, rhs: CGRect) -> CGRect {
 }
 
 /**
+Union assignment operator for CGRect
+
+:param: lhs left hand variable
+:param: rhs right hand rect with which union left
+*/
+public func |= (inout lhs: CGRect, rhs: CGRect) {
+    lhs = lhs | rhs
+}
+
+/**
 Intersection operator for two CGRects
 
 :param: lhs left hand CGRect
@@ -154,4 +164,14 @@ Intersection operator for two CGRects
 */
 public func &(lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRectIntersection(lhs, rhs)
+}
+
+/**
+Intersection assignment operator for CGRect
+
+:param: lhs left hand variable
+:param: rhs right hand rect with which intersect left
+*/
+public func &= (inout lhs: CGRect, rhs: CGRect) {
+    lhs = lhs & rhs
 }

@@ -97,6 +97,18 @@ class OperatorsTests: XCTestCase {
             , "minimum rect covers two rect should be generated with union operator")
     }
     
+    func testUnionAssignOperator() {
+        var arect = CGRect(x: 0, y: 0, width: 2, height: 2)
+        let brect = CGRect(x: 1, y: 2, width: 3, height: 3)
+        arect |= brect
+        XCTAssert(
+            arect.origin.x == 0 &&
+                arect.origin.y == 0 &&
+                arect.size.width == 4 &&
+                arect.size.height == 5
+            , "minimum rect covers two rect should be generated with union assign operator")
+    }
+    
     func testIntersectionOperator() {
         let arect = CGRect(x: 0, y: 0, width: 2, height: 2)
         let brect = CGRect(x: 1, y: 1, width: 3, height: 3)
@@ -107,5 +119,17 @@ class OperatorsTests: XCTestCase {
                 crect.size.width == 1 &&
                 crect.size.height == 1
             , "maximum rect contained in both two rect should be generated with intersection operator")
+    }
+    
+    func testIntersectionAssignOperator() {
+        var arect = CGRect(x: 0, y: 0, width: 2, height: 2)
+        let brect = CGRect(x: 1, y: 1, width: 3, height: 3)
+        arect &= brect
+        XCTAssert(
+            arect.origin.x == 1 &&
+                arect.origin.y == 1 &&
+                arect.size.width == 1 &&
+                arect.size.height == 1
+            , "maximum rect contained in both two rect should be generated with intersection assign operator")
     }
 }
